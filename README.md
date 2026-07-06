@@ -1,6 +1,6 @@
 # ab-test-review
 
-A Claude Skill for reviewing A/B tests and pilots at any stage of their lifecycle — design docs before launch, in-flight health checks, and post-test readouts.
+An Agent Skill for reviewing A/B tests and pilots at any stage of their lifecycle — design docs before launch, in-flight health checks, and post-test readouts. Compatible with Claude Code and other Agent Skills consumers.
 
 Grounded in *[Trustworthy Online Controlled Experiments](https://experimentguide.com)* by Kohavi, Tang, and Xu, but built for real-world operational pilots, not just web-scale product experiments: conservative controls (e.g., human operator as the baseline for an AI caller), cluster randomization, delayed outcomes, no-global-holdout settings, and quasi-experimental fallbacks are all first-class citizens.
 
