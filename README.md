@@ -4,6 +4,8 @@ A Claude Skill for reviewing A/B tests and pilots at any stage of their lifecycl
 
 Grounded in *[Trustworthy Online Controlled Experiments](https://experimentguide.com)* by Kohavi, Tang, and Xu, but built for real-world operational pilots, not just web-scale product experiments: conservative controls (e.g., human operator as the baseline for an AI caller), cluster randomization, delayed outcomes, no-global-holdout settings, and quasi-experimental fallbacks are all first-class citizens.
 
+*Inspired by the [ml-system-design-review](https://github.com/ML-SystemDesign/MLSystemDesign/tree/main/skills) skill by Valerii Babushkin and Arseny Kravchenko — same review pattern, retargeted from ML system designs to A/B tests.*
+
 ## What it does
 
 Given a test design, a readout, or both, the skill produces:
@@ -45,19 +47,6 @@ Upload a test design, a pilot plan, or a readout and ask for a review:
 - "We're testing AI calls vs operator calls, grade this plan"
 
 The skill detects the stage (pre-launch / in-flight / readout) and scales rigor accordingly — a hypothesis sketch isn't punished for missing runbooks, but a readout without validity checks is.
-
-## Attribution
-
-The structure and review approach of this skill are adapted from the
-[ml-system-design-review skill](https://github.com/ML-SystemDesign/MLSystemDesign/tree/main/skills)
-in the [MLSystemDesign](https://github.com/ML-SystemDesign/MLSystemDesign) repository
-(MIT License) by Valerii Babushkin and Arseny Kravchenko, which reviews ML system
-designs against their book *Machine Learning System Design*.
-
-This fork redesigns the content for controlled experiments, anchored to
-*Trustworthy Online Controlled Experiments: A Practical Guide to A/B Testing*
-by Ron Kohavi, Diane Tang, and Ya Xu. The book itself is referenced as a
-methodological framework; no book content is reproduced here.
 
 ## License
 
