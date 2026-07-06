@@ -32,11 +32,17 @@ ab-test-review/
 
 ## Installation
 
-**Claude.ai / Claude Desktop:** upload `ab-test-review.skill` to a chat and click **Save skill**, or add it via Settings → Skills.
+Clone the repo:
 
-**Claude Code:** copy the `ab-test-review/` folder into your skills directory (e.g., `~/.claude/skills/`).
+```bash
+git clone https://github.com/antocci/ab-test-review.git
+```
 
-To rebuild the `.skill` package after edits: zip the `ab-test-review/` folder (the folder itself must be inside the archive) and rename the extension to `.skill`.
+**Claude Code (or any harness that reads `~/.claude/skills/`):** copy the `ab-test-review/` folder into your skills directory (e.g., `~/.claude/skills/`).
+
+**Claude.ai / Claude Desktop:** package the folder as a `.skill` bundle first — zip the `ab-test-review/` folder (the folder itself must be inside the archive) and rename the extension to `.skill` — then upload it in a chat and click **Save skill**, or add it via Settings → Skills.
+
+**Other Agent Skills consumers:** point your agent at the `ab-test-review/` folder — `SKILL.md` + `references/` follow the standard Agent Skills layout.
 
 ## Usage
 
