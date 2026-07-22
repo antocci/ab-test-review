@@ -17,8 +17,9 @@ The verdict is computed from the gradecard, never chosen independently:
    - 3.0 and higher (B and above): **approve**
    - 2.3 up to 3.0 (B- to C+): **approve with concerns**
    - below 2.3 (C and below): **needs improvement**
+4. Cap with critical findings — the average never outvotes an invalid comparison. With one or more critical findings the verdict cannot be **approve**; if a critical finding invalidates the comparison itself (broken randomization, unhandled SRM, contaminated arms, undisclosed post-hoc metric or analysis switch), the verdict is **needs improvement** regardless of the average. When the cap lowers the verdict, say so next to it and name the capping finding: `needs improvement (avg 3.2, capped: unhandled SRM)`.
 
-Show the average next to the verdict, and say which question the verdict answers: "ready to launch" for pre-launch reviews, "decision can be trusted" for readouts. The verdict summarizes the gradecard; it does not soften findings — critical findings are counted on the scorecard and lead the comments.
+Show the average next to the verdict, and say which question the verdict answers: "ready to launch" for pre-launch reviews, "decision can be trusted" for readouts. The verdict summarizes the gradecard capped by critical findings; it does not soften findings — critical findings are counted on the scorecard and lead the comments.
 
 ## Part 1: Scorecard
 
@@ -31,7 +32,7 @@ Also save the filled scorecard as a standalone markdown file so the team can sha
 
 ## A/B Test Scorecard: <test or pilot name>
 
-**Verdict:** <approve | approve with concerns | needs improvement> (avg <points>) · answers: <ready to launch | decision can be trusted> · <stage>, <test type>, <risk class>
+**Verdict:** <approve | approve with concerns | needs improvement> (avg <points><, capped: <finding> if the critical-finding cap applied>) · answers: <ready to launch | decision can be trusted> · <stage>, <test type>, <risk class>
 **Critical findings:** <count, or none>
 **Author verdict:** <one Ronny, Diane, and Ya sentence tied to evidence>
 

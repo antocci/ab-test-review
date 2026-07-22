@@ -30,6 +30,7 @@ Read enough to answer these questions before judging:
 - What was the analysis plan before results existed, and does the readout follow it?
 - What changed mid-test (treatment tweaks, AI prompt versions, script edits, ramp changes), and is it recorded?
 - Where do the results artifacts contradict or extend the design doc?
+- Which numeric claims can be recomputed from the artifacts themselves (arm counts for SRM, baseline and N for power/MDE, estimates for CIs and reconciliation)? Recompute them per `verification-computations.md` rather than trusting the doc.
 
 Prefer evidence in this order: assignment/exposure logs and analysis code, dashboards and experiment-platform records, the design doc, readout decks, memos, issue/PR discussion, remembered context.
 
@@ -72,6 +73,7 @@ For operational pilots, AI-agent treatments, and constrained designs, also apply
 
 - Findings ordered by severity, immediately after the gradecard; do not bury them in coverage.
 - Include evidence references when reviewing files.
+- A finding backed by a recomputation states its inputs and method; a verified numeric contradiction outranks any stylistic finding of the same severity.
 - Phrase recommendations as concrete changes, not abstract advice.
 - Separate blockers from improvements; for pre-launch reviews, separate launch blockers from nice-to-haves.
 - Include praise only when tied to a specific design mechanism.

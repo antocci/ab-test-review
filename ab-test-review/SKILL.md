@@ -2,7 +2,7 @@
 name: ab-test-review
 description: Use when reviewing A/B tests, experiments, or pilots at any stage — design docs before launch, in-flight health checks, or post-test readouts and results. Triggers include uploaded A/B test docs, experiment designs, pilot plans, test readouts, uplift analyses, champion/challenger comparisons, or requests to review, grade, audit, or sanity-check a test or pilot. "Pilot" includes operational strategy tests (e.g., AI vs human calls, sending a letter vs not, new outreach scripts), not only product experiments. Applies the Trustworthy Online Controlled Experiments framework by Kohavi, Tang, and Xu to grade designs and readouts, compare the design with the actual results, find validity threats and cheap fixes, and give specific non-cringy praise.
 metadata:
-  version: "0.2.0"
+  version: "0.3.0"
   scope: ab-test-and-pilot-review
   reference: https://experimentguide.com
 ---
@@ -64,6 +64,7 @@ Stage is orthogonal to evidence mode: pre-launch, in-flight, or readout. Name it
 - Load `references/review-workflow.md` for the default procedure.
 - Load `references/rubrics.md` when grading a test or readout.
 - Load `references/design-and-results-audit.md` when comparing a design with results artifacts, or when no design doc is found.
+- Load `references/verification-computations.md` when artifacts contain checkable numbers (arm counts, baselines, per-arm Ns, p-values, CIs) — recompute rather than trust.
 - Load `references/operational-pilots.md` for first-class review of operational pilots, offline/human-in-the-loop treatments, AI-agent treatments, cluster/switchback/quasi designs, and delayed-outcome settings.
 - Load `references/red-flags-and-fixes.md` when prioritizing findings and fixes.
 - Load `references/praise-patterns.md` before writing praise or author-facing feedback.
@@ -73,7 +74,7 @@ Stage is orthogonal to evidence mode: pre-launch, in-flight, or readout. Name it
 
 Format per `references/output-templates.md`: one template for every review, in two parts.
 
-1. **Scorecard** — approximately one screenshot-friendly page: a small skill-and-book attribution line at the top, then verdict (approve | approve with concerns | needs improvement) computed from the gradecard average per that template, critical-finding count, author verdict, gradecard (one row per rubric dimension in `references/rubrics.md`, plus an operational-pilot row when applicable), top fix, and book-backed takeaway. Also saved as a standalone shareable `.md` file per that template's save rule.
+1. **Scorecard** — approximately one screenshot-friendly page: a small skill-and-book attribution line at the top, then verdict (approve | approve with concerns | needs improvement) computed from the gradecard average and capped by critical findings per that template, critical-finding count, author verdict, gradecard (one row per rubric dimension in `references/rubrics.md`, plus an operational-pilot row when applicable), top fix, and book-backed takeaway. Also saved as a standalone shareable `.md` file per that template's save rule.
 2. **Comments** — evidence reviewed, design-doc status, inferred assumptions (results-only), critical/major/minor findings, low-hanging fruit, good decisions to preserve, questions for authors, and a prioritized fix plan. A quick pass may stop at the scorecard.
 
 For pre-launch reviews the verdict answers "is this test ready to launch"; for readouts it answers "can this decision be trusted". Say which question the verdict answers on the scorecard.
