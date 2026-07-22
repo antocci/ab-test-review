@@ -1,8 +1,8 @@
 ---
 name: ab-test-review
-description: Use when reviewing A/B tests, experiments, or pilots at any stage — design docs before launch, in-flight health checks, or post-test readouts and results. Triggers include uploaded A/B test docs, experiment designs, pilot plans, test readouts, uplift analyses, champion/challenger comparisons, or requests to review, grade, audit, or sanity-check a test or pilot. "Pilot" includes operational strategy tests (e.g., AI vs human calls, sending a letter vs not, new outreach scripts), not only product experiments. Applies the Trustworthy Online Controlled Experiments framework by Kohavi, Tang, and Xu to grade designs and readouts, compare the design with the actual results, find validity threats and cheap fixes, and give specific non-cringy praise.
+description: Use only when the user asks for a review — to review, grade, audit, sanity-check, or critique a concrete A/B test, experiment, or pilot artifact (design doc before launch, in-flight health check, or post-test readout/results/uplift analysis). Requires both a reviewable artifact and review intent; sharing a test doc for another purpose is not a trigger. "Pilot" includes operational strategy tests (e.g., AI vs human calls, sending a letter vs not, new outreach scripts), not only product experiments. Do NOT use for brainstorming or discussing test ideas, designing a new test from scratch, answering general questions about A/B testing methodology or statistics, or casual conversation about a running test — answer those directly without this skill. Applies the Trustworthy Online Controlled Experiments framework by Kohavi, Tang, and Xu to grade designs and readouts, compare the design with the actual results, find validity threats and cheap fixes, and give specific non-cringy praise.
 metadata:
-  version: "0.3.0"
+  version: "0.3.1"
   scope: ab-test-and-pilot-review
   reference: https://experimentguide.com
 ---
@@ -15,7 +15,7 @@ A pilot is a test of an operational strategy — call with AI vs a human operato
 
 ## Activation
 
-Use when the user asks to review, grade, audit, sanity-check, or improve:
+Activate only on review intent: the user asks to review, grade, audit, sanity-check, or improve a concrete artifact —
 
 - An A/B test or experiment design document.
 - A pilot plan for an operational strategy (channels, scripts, AI vs human, contact policies).
@@ -23,7 +23,17 @@ Use when the user asks to review, grade, audit, sanity-check, or improve:
 - A test readout, results deck, uplift analysis, or ship/no-ship recommendation.
 - A quasi-experimental setup (pre/post, geo split, switchback, matched cohorts) used where randomization is constrained.
 
-Do not use for pure metric definition work, ordinary dashboard review, ML system design review (use ml-system-design-review), or survey/qualitative research unless the request is about experiment validity or decision quality.
+Both parts are required: an artifact (or a described test concrete enough to grade) and a request to evaluate it. Mentioning a test, sharing a doc for context, or asking a question about one is not review intent.
+
+Do not activate for:
+
+- Brainstorming or discussing test ideas; the user thinking out loud about what to test.
+- Designing a new test from scratch (help directly; offer a review once a draft exists).
+- General questions about A/B testing methodology, statistics, or tooling.
+- Status questions about a running test ("how long left?", "what was the split?") with no evaluation asked.
+- Pure metric definition work, ordinary dashboard review, ML system design review (use ml-system-design-review), or survey/qualitative research unless the request is about experiment validity or decision quality.
+
+When in doubt, answer without the skill and offer a review as a follow-up instead of starting one.
 
 ## Mandatory First Step
 
