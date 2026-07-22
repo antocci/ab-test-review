@@ -21,6 +21,7 @@ Scale rigor to stage. A hypothesis sketch needs decision framing, treatment defi
 Read enough to answer these questions before judging:
 
 - What decision is this test supposed to inform, and who owns it?
+- Does this question need an experiment at all, and what is the cheapest credible way to answer it?
 - What is the current strategy, and what exactly does the treatment change?
 - What is the primary metric, what are the guardrails, and how do they map to business value?
 - What is the unit of randomization, and can units in different arms affect each other?
@@ -54,6 +55,7 @@ Use `rubrics.md` for letter grades. Do not let the gradecard bury the review. Af
 ## Review Lenses
 
 - Decision framing: hypothesis, decision informed, success criteria, antigoals, what happens on flat.
+- Test-worthiness and alternatives: does this question need an experiment at all, is there a cheaper or faster way to learn it (prior tests, existing data, an obvious call, a reversible launch), is the primary metric the real business lever or a movable proxy, which competing hypotheses would the result fail to separate, and what is the opportunity cost of the traffic or capacity the test consumes. Stay inside the experiment framework — this challenges whether to test, not whether the business idea itself is good.
 - Treatment and control: exact difference between arms, control choice rationale, treatment fidelity plan.
 - Randomization: unit choice, assignment mechanism, stratification, interference/spillover, contamination paths.
 - Metrics: primary metric, guardrails, OEC/business mapping, delayed-outcome handling, ratio-metric analysis units.
@@ -62,7 +64,7 @@ Use `rubrics.md` for letter grades. Do not let the gradecard bury the review. Af
 - Analysis: pre-registration, peeking policy, multiple comparisons, CIs, segment analysis discipline, variance handling for clustered or ratio metrics.
 - Risk: cost of each mistake direction, compliance/ethics of the treatment, guardrail breach response, kill switch.
 - Operations: ramp/stop rules, in-flight monitoring, owner, mid-test change log.
-- Learning: readout quality, generalization limits, knowledge capture, follow-up tests.
+- Learning: readout quality, the result-to-belief leap (generalization boundary and carrying causal mechanism, not just a p-value), generalization limits, knowledge capture, follow-up tests.
 
 For operational pilots, AI-agent treatments, and constrained designs, also apply `operational-pilots.md`.
 

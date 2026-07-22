@@ -30,6 +30,9 @@ Use this file to prioritize. A finding is useful when it explains why the gap ma
 - Delayed outcomes read out before maturity; early proxies silently promoted to primary.
 - Ownership is a team name, not a responsible owner with stop/extend authority.
 - Prior related tests ignored; the pilot re-learns a known result at customer expense.
+- Question does not need an experiment: the effect is obvious, the decision is cheaply reversible, or existing data already answers it — traffic or capacity spent for no incremental information.
+- Primary metric is a movable local proxy (clicks, opens, a single funnel step) not shown to track the business outcome it stands in for; a "win" can be gamed without moving value.
+- Result generalized into a business belief beyond the tested population, market, or time window, with no boundary stated and no causal mechanism named to carry it.
 
 ## Validity Checklist
 
@@ -64,13 +67,15 @@ For operational pilots, AI treatments, and quasi designs, also check `operationa
 - Add a maturity-aligned readout date to the calendar at design time, so nobody reads out early by accident.
 - Add a treatment-fidelity check: sample calls/letters/transcripts per arm on a schedule.
 - Record the design in a findable place before launch; a one-page pre-registration beats a perfect doc after results.
+- Before designing, write one line: why this needs an experiment, and what the cheapest alternative (prior test, existing data, an obvious call, a reversible launch) would cost instead.
+- State the generalization boundary in the readout: which population, market, and time window the result is claimed to hold for, and the mechanism you believe carries it there.
 
 ## Fix Plan Ordering
 
 Prefer this sequence:
 
 1. Stop invalid or misleading comparisons (contamination, SRM, unit mismatch, post-hoc switches).
-2. Fix the decision link: hypothesis, primary metric, and win/loss/flat actions.
+2. Fix the decision link and test-worthiness: hypothesis, primary metric as the real lever (not a movable proxy), win/loss/flat actions, and whether the question needs an experiment at all.
 3. Fix power, duration, and outcome maturity so the test can answer its question.
 4. Add instrumentation verification and analysis-plan pre-registration.
 5. Add guardrails, stopping rules, ownership, and change-log discipline for launch and in-flight.
